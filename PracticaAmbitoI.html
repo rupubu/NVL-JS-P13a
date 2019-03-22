@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      function esNumeroPrimo ( nNumero ) {
+        for( var nIdx=2; nIdx < nNumero; nIdx++) {
+          if (nNumero % nIdx === 0) {
+            return false;
+          }
+        }
+        return nNumero !== 1;
+      }
+      // Esta función devolverá un array con los números primos resultantes
+      function ListaNPrimos ( nCantidad ) {
+        var anNumerosPrimos = [];
+
+        for ( var nAdx=2; nAdx < nCantidad; nAdx++) {
+          if (esNumeroPrimo(nAdx)){
+            anNumerosPrimos.push(nAdx);
+          }
+        }
+        return anNumerosPrimos;
+      }
+
+      var anResultado = ListaNPrimos(150);
+
+      if (anResultado.length > 0) {
+        for (var nBdx=0; nBdx < anResultado.length; nBdx++) {
+          //alert(anResultado[nBdx]);
+          document.write(anResultado[nBdx] + "<BR>");
+        }
+      }
+
+    </script>
+    <title>Práctica de ámbito (I)</title>
+  </head>
+  <body>
+
+  </body>
+</html>
